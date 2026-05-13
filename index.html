@@ -3,518 +3,674 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+
+  <meta name="title" content="TRICE: Teaching Thinking Models to Reason with Tools">
+  <meta name="description" content="TRICE is a full-pipeline recipe for tool-integrated reasoning that teaches thinking models to interleave textual reasoning with code execution.">
+  <meta name="keywords" content="TRICE, tool-integrated reasoning, large language models, reasoning models, reinforcement learning, RLVR, supervised fine-tuning, code execution">
+  <meta name="author" content="Qianjia Cheng, Yuchen Zhang, Zhilin Wang, Yuxin Zuo, Shunkai Zhang, Yuchen Fan, Yu Qiao, Bowen Zhou, Ning Ding, Yu Cheng, Yun Luo, Ganqu Cui">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
+
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:site_name" content="TRICE Project">
+  <meta property="og:title" content="Teaching Thinking Models to Reason with Tools">
+  <meta property="og:description" content="A full-pipeline recipe for tool-integrated reasoning that injects natural tool use without sacrificing no-tool reasoning ability.">
+  <meta property="og:url" content="https://cajzella.github.io/trice-homepage/">
+  <meta property="og:image" content="https://cajzella.github.io/trice-homepage/static/images/social_preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="og:image:alt" content="TRICE project page preview">
+  <meta property="article:published_time" content="2026-05-07T00:00:00.000Z">
   <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="article:tag" content="Tool-integrated reasoning">
+  <meta property="article:tag" content="Reasoning models">
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:title" content="Teaching Thinking Models to Reason with Tools">
+  <meta name="twitter:description" content="TRICE teaches thinking models to interleave textual reasoning with code execution while preserving no-tool reasoning ability.">
+  <meta name="twitter:image" content="https://cajzella.github.io/trice-homepage/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="TRICE project page preview">
 
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="citation_title" content="Teaching Thinking Models to Reason with Tools: A Full-Pipeline Recipe for Tool-Integrated Reasoning">
+  <meta name="citation_author" content="Cheng, Qianjia">
+  <meta name="citation_author" content="Zhang, Yuchen">
+  <meta name="citation_author" content="Wang, Zhilin">
+  <meta name="citation_author" content="Zuo, Yuxin">
+  <meta name="citation_author" content="Zhang, Shunkai">
+  <meta name="citation_author" content="Fan, Yuchen">
+  <meta name="citation_author" content="Qiao, Yu">
+  <meta name="citation_author" content="Zhou, Bowen">
+  <meta name="citation_author" content="Ding, Ning">
+  <meta name="citation_author" content="Cheng, Yu">
+  <meta name="citation_author" content="Luo, Yun">
+  <meta name="citation_author" content="Cui, Ganqu">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2605.06326.pdf">
+
+  <meta name="theme-color" content="#0f766e">
+  <meta name="msapplication-TileColor" content="#0f766e">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
+  <title>Teaching Thinking Models to Reason with Tools</title>
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
+  <link rel="icon" type="image/png" href="static/images/favicon.png">
+  <link rel="apple-touch-icon" href="static/images/favicon.png">
+
   <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="static/css/index.css?v=20260513-abstract-simple">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
   <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "headline": "Teaching Thinking Models to Reason with Tools: A Full-Pipeline Recipe for Tool-Integrated Reasoning",
+    "description": "TRICE is a full-pipeline recipe for tool-integrated reasoning that teaches thinking models to interleave textual reasoning with code execution.",
     "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
+      {"@type": "Person", "name": "Qianjia Cheng"},
+      {"@type": "Person", "name": "Yuchen Zhang"},
+      {"@type": "Person", "name": "Zhilin Wang"},
+      {"@type": "Person", "name": "Yuxin Zuo"},
+      {"@type": "Person", "name": "Shunkai Zhang"},
+      {"@type": "Person", "name": "Yuchen Fan"},
+      {"@type": "Person", "name": "Yu Qiao"},
+      {"@type": "Person", "name": "Bowen Zhou"},
+      {"@type": "Person", "name": "Ning Ding"},
+      {"@type": "Person", "name": "Yu Cheng"},
+      {"@type": "Person", "name": "Yun Luo"},
+      {"@type": "Person", "name": "Ganqu Cui"}
     ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
+    "datePublished": "2026-05-07",
+    "publisher": {"@type": "Organization", "name": "arXiv"},
+    "url": "https://arxiv.org/abs/2605.06326",
+    "keywords": ["tool-integrated reasoning", "large reasoning models", "code execution", "RLVR", "SFT"],
+    "abstract": "Tool-integrated reasoning offers a direct way to extend thinking models beyond the limits of text-only reasoning. TRICE presents a full-pipeline recipe for injecting natural tool-use behavior into strong thinking models without sacrificing no-tool reasoning ability.",
+    "isAccessibleForFree": true
   }
   </script>
 </head>
+
 <body>
-
-
-  <!-- Scroll to Top Button -->
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
   <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+    <section class="hero trice-hero">
+      <div class="hero-body">
+        <div class="container is-max-widescreen">
+          <div class="columns is-centered">
+            <div class="column has-text-centered is-10">
+              <p class="eyebrow">Tool-Integrated Reasoning</p>
+              <h1 class="title is-1 publication-title">
+                <span>Teaching Thinking Models</span>
+                <span>to Reason with Tools</span>
+              </h1>
+              <h2 class="subtitle is-3 publication-subtitle">
+                A Full-Pipeline Recipe for Tool-Integrated Reasoning
+              </h2>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+              <div class="is-size-5 publication-authors author-list">
+                <span class="author-block"><a href="https://scholar.google.com/citations?user=0eM-71YAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Qianjia Cheng on Google Scholar">Qianjia Cheng</a><sup>1,2*</sup></span>
+                <span class="author-block"><a href="https://scholar.google.com/citations?hl=zh-CN&user=Y2oqeP0AAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Yuchen Zhang on Google Scholar">Yuchen Zhang</a><sup>2,3*</sup></span>
+                <span class="author-block"><a href="https://scholar.google.com/citations?user=OmMgSQsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Zhilin Wang on Google Scholar">Zhilin Wang</a><sup>2,6</sup></span>
+                <span class="author-block">Yuxin Zuo<sup>5</sup></span>
+                <span class="author-block">Shunkai Zhang<sup>2,3</sup></span>
+                <span class="author-block"><a href="https://scholar.google.com/citations?hl=en&user=u75E9OsAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Yuchen Fan on Google Scholar">Yuchen Fan</a><sup>7</sup></span>
+                <span class="author-block"><a href="https://scholar.google.com/citations?hl=en&user=gFtI-8QAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Yu Qiao on Google Scholar">Yu Qiao</a><sup>2</sup></span>
+                <span class="author-block"><a href="https://scholar.google.com/citations?hl=en&user=h3Nsz6YAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Bowen Zhou on Google Scholar">Bowen Zhou</a><sup>2,5</sup></span>
+                <span class="author-block"><a href="https://scholar.google.com/citations?hl=en&user=uZXQuYAAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Ning Ding on Google Scholar">Ning Ding</a><sup>5†</sup></span>
+                <span class="author-block"><a href="https://scholar.google.com/citations?hl=en&user=ORPxbV4AAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Yu Cheng on Google Scholar">Yu Cheng</a><sup>2,4†</sup></span>
+                <span class="author-block"><a href="https://scholar.google.com/citations?hl=en&user=B_bdRlAAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Yun Luo on Google Scholar">Yun Luo</a><sup>2†</sup></span>
+                <span class="author-block"><a href="https://scholar.google.com/citations?hl=en&user=3IVSzZgAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Ganqu Cui on Google Scholar">Ganqu Cui</a><sup>2†</sup></span>
+              </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+              <div class="is-size-6 publication-authors affiliations affiliation-list">
+                <span><sup>1</sup>Zhejiang University</span>
+                <span><sup>2</sup>Shanghai AI Laboratory</span>
+                <span><sup>3</sup>Peking University</span>
+                <span><sup>4</sup>The Chinese University of Hong Kong</span>
+                <span><sup>5</sup>Tsinghua University</span>
+                <span><sup>6</sup>University of Science and Technology of China</span>
+                <span><sup>7</sup>Shanghai Jiao Tong University</span>
+              </div>
+              <!-- <p class="eql-cntrb"><strong><sup>*</sup>Equal contribution.</strong> <strong><sup>†</sup>Corresponding authors.</strong></p> -->
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
+              <!-- <p class="hero-tldr">
+                TRICE teaches strong thinking models to interleave natural-language reasoning with executable code,
+                unlocking tool use while preserving their native text-only reasoning mode.
+              </p> -->
 
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
+              <div class="publication-links resource-links" aria-label="Project resources">
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2605.06326" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark resource-button">
+                    <span class="brand-icon brand-icon-arxiv" aria-hidden="true"></span>
+                    <span>arXiv</span>
                   </a>
                 </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                  <a href="https://huggingface.co/CajZella" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark resource-button resource-button-wide">
+                    <img class="brand-image" src="static/images/icon-huggingface.svg" alt="" aria-hidden="true">
+                    <span>Data &amp; Models</span>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
+    <section class="section key-section leaderboard-overview">
+      <div class="container is-max-widescreen">
+        <div class="leaderboard-card">
+          <div class="chart-heading">
+            <h2>AIME 2025 Leaderboard</h2>
+          </div>
+          <div class="chart-legend">
+            <span><i class="legend-chip baseline-tool"></i>Tool-integrated reasoning</span>
+            <span><i class="legend-chip baseline-no-tool"></i>Text-only reasoning</span>
+          </div>
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
+          <div class="chart-panels">
+            <div class="chart-panel">
+              <h3>&lt;10B Scale</h3>
+              <div id="aime-chart-4b" class="aime-chart" aria-label="AIME 2025 leaderboard for less than 10B scale models"></div>
+            </div>
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            <div class="chart-panel">
+              <h3>~30B Scale</h3>
+              <div id="aime-chart-30b" class="aime-chart" aria-label="AIME 2025 leaderboard for around 30B scale models"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light abstract-section">
+      <div class="container is-max-desktop">
+        <div class="abstract-layout">
+          <h2 class="title is-3 has-text-centered">Abstract</h2>
+
+          <div class="abstract-copy content has-text-justified">
+            <p>
+              Tool-integrated reasoning (TIR) offers a direct way to extend thinking models beyond the limits of text-only reasoning.
+              Paradoxically, we observe that tool-enabled evaluation can degrade reasoning performance even when the strong thinking models make almost no actual tool calls.
+            </p>
+          </div>
+
+          <figure class="case-study-card">
+            <img src="static/images/intro_case_v2.png" alt="Case study comparing late verification with interleaved tool use">
+            <figcaption>
+              <strong>The same problem, two policies for invoking the tool.</strong>
+              Grey boxes denote text-only reasoning; <span class="caption-cell caption-cell-in">In[k]</span> cells indicate tool calls, and <span class="caption-cell caption-cell-out">Out[k]</span> cells represent tool responses.
+              <strong>Left:</strong> Qwen3-30B-Thinking-2507 treats the Python sandbox as a final-pass verifier. After a text-only Burnside derivation yields the inconsistent value 2420/32 = 75.625, it makes a single late-stage call that hard-codes the flawed assumptions (e.g. <code>reflections_fixed = 16*C[8]</code>). A silent integer floor masks the error, leading to the incorrect result <span class="math-box">75</span> <span class="wrong-mark">&#10007;</span>.
+              <strong>Right:</strong> TRICE-30B interleaves textual reasoning with code execution, feeding each intermediate result back into the same Burnside framework, and correctly obtains <span class="math-box">88</span> <span class="right-mark">&#10003;</span>.
+            </figcaption>
+          </figure>
+
+          <div class="abstract-copy content has-text-justified">
+            <p>
+              In this paper, we investigate <strong>how to inject natural tool-use behavior into a strong thinking model without sacrificing its no-tool reasoning ability</strong>,
+              and <strong>present a comprehensive TIR recipe</strong>. We highlight that
+              <span class="abstract-index">(i)</span> the effectiveness of TIR supervised fine-tuning (SFT) hinges on the learnability of teacher trajectories, which should prioritize problems inherently suited for tool-augmented solutions;
+              <span class="abstract-index">(ii)</span> controlling the proportion of tool-use trajectories could mitigate the catastrophic forgetting of text-only reasoning capacity;
+              <span class="abstract-index">(iii)</span> optimizing for <em>pass@k</em> and response length instead of training loss could maximize TIR SFT gains while preserving headroom for reinforcement learning (RL) exploration;
+              <span class="abstract-index">(iv)</span> a stable RL with verifiable rewards (RLVR) stage, built upon suitable SFT initialization and explicit safeguards against mode collapse, provides a simple yet remarkably effective solution.
+              When applied to Qwen3 thinking models at 4B and 30B scales, our recipe yields models that achieve
+              <strong class="sota-claim">state-of-the-art</strong>
+              performance in a wide range of benchmarks among open-source models, such as 96.7% and 99.2% on AIME 2025 for 4B and 30B, respectively.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section recipe-section">
+      <div class="container is-max-widescreen">
+        <div class="has-text-centered section-heading">
+          <p class="section-kicker">Method</p>
+          <h2 class="title is-3">A Full-Pipeline Recipe for TIR</h2>
+        </div>
+
+        <div class="method-board">
+          <p class="method-lead">
+            Teaching a strong thinking model to reason with tools without sacrificing text-only reasoning requires a systematic recipe
+            spanning data preparation, SFT, the transition from SFT to RL, and RL itself.
+          </p>
+
+          <div class="method-stage method-stage-data">
+            <div class="method-stage-header">
+              <span class="method-stage-index">01</span>
+              <div>
+                <h3>Data Engineering for TIR SFT</h3>
+                <p>Curate learnable TIR supervision while preserving text-only reasoning ability.</p>
+              </div>
+            </div>
+            <div class="method-detail-grid is-data-grid">
+              <div class="method-point">
+                <span>Teacher Model Selection</span>
+                <p>Teacher selection should account for the <strong>learnability of tool-use patterns</strong>, not teacher accuracy alone.</p>
+              </div>
+              <div class="method-point">
+                <span>Problem Selection</span>
+                <p><strong>Tool-advantaged problems</strong> better elicit useful tool-use trajectories from the teacher.</p>
+              </div>
+              <div class="method-point">
+                <span>Trajectory Composition</span>
+                <p><strong>Mix text-only trajectories</strong> into the TIR set to preserve the student's native reasoning capability.</p>
+              </div>
+              <div class="method-point">
+                <span>Overlong Filtering</span>
+                <p><strong>Filtering overlong</strong> teacher trajectories improves downstream RL efficiency and reduces length imitation.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="method-stage method-stage-training">
+            <div class="method-stage-header">
+              <span class="method-stage-index">02</span>
+              <div>
+                <h3>Stage Coordination: From SFT to RL</h3>
+                <p>A principled execution of fine-tuning is needed to fully unlock TIR within the holistic training pipeline.</p>
+              </div>
+            </div>
+            <div class="method-detail-grid is-training-grid">
+              <div class="method-point">
+                <span>TIR SFT Dynamics</span>
+                <p>During TIR SFT, what the student learns evolves across <strong>form, substance, and noise</strong>.</p>
+              </div>
+              <div class="method-point">
+                <span>Checkpoint Selection</span>
+                <p>We identify <strong>RL-ready</strong> SFT checkpoints by tracking <em>pass@k</em> performance and rollout length.</p>
+              </div>
+              <div class="method-point">
+                <span>Stable RL Training</span>
+                <p>Using <strong>on-policy</strong> rollouts together with <strong>rollout routing replay</strong> is simple but necessary.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-widescreen">
+        <div class="has-text-centered section-heading">
+          <p class="section-kicker">Main Results</p>
+          <h2 class="title is-3">State-of-the-art Tool-Integrated Reasoning</h2>
+        </div>
+        <div class="table-card wide">
+          <table class="table is-fullwidth trice-table results-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Tool</th>
+                <th>AIME25</th>
+                <th>HMMT25</th>
+                <th>BeyondAIME</th>
+                <th>IMOAnswerBench</th>
+                <th>APEX25</th>
+                <th>Avg.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="scale-row">
+                <td colspan="8">&lt;10B scale</td>
+              </tr>
+              <tr>
+                <td>Qwen3-4B-Thinking-2507</td>
+                <td><span class="tool-mark tool-no" aria-label="No tool">&#10007;</span></td>
+                <td>82.5</td>
+                <td>68.8</td>
+                <td>54.3</td>
+                <td>57.0</td>
+                <td>2.8</td>
+                <td>58.2</td>
+              </tr>
+              <tr>
+                <td>Qwen3.5-4B</td>
+                <td><span class="tool-mark tool-no" aria-label="No tool">&#10007;</span></td>
+                <td>75.8</td>
+                <td>72.9</td>
+                <td>58.8</td>
+                <td>59.5</td>
+                <td>0.0</td>
+                <td>60.6</td>
+              </tr>
+              <tr>
+                <td>Qwen3.5-9B</td>
+                <td><span class="tool-mark tool-no" aria-label="No tool">&#10007;</span></td>
+                <td>85.8</td>
+                <td>82.1</td>
+                <td>67.3</td>
+                <td>65.0</td>
+                <td>0.0</td>
+                <td>67.2</td>
+              </tr>
+              <tr class="highlight-row">
+                <td>TRICE-4B</td>
+                <td><span class="tool-mark tool-no" aria-label="No tool">&#10007;</span></td>
+                <td>79.2</td>
+                <td>71.3</td>
+                <td>58.5</td>
+                <td>61.0</td>
+                <td>5.6</td>
+                <td>61.7</td>
+              </tr>
+              <tr>
+                <td>ASTER-4B<sup>†</sup></td>
+                <td><span class="tool-mark tool-yes" aria-label="With tool">&#10003;</span></td>
+                <td>90.0</td>
+                <td>77.1</td>
+                <td>61.7</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+              </tr>
+              <tr>
+                <td>AgentMath-8B<sup>†</sup></td>
+                <td><span class="tool-mark tool-yes" aria-label="With tool">&#10003;</span></td>
+                <td>84.7</td>
+                <td>71.3</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+              </tr>
+              <tr class="highlight-row">
+                <td>TRICE-4B</td>
+                <td><span class="tool-mark tool-yes" aria-label="With tool">&#10003;</span></td>
+                <td><strong>96.7</strong></td>
+                <td><strong>86.7</strong></td>
+                <td><strong>71.3</strong></td>
+                <td><strong>68.9</strong></td>
+                <td><strong>13.9</strong></td>
+                <td><strong>72.2</strong></td>
+              </tr>
+              <tr class="scale-row">
+                <td colspan="8">~30B scale</td>
+              </tr>
+              <tr>
+                <td>Qwen3-30B-A3B-Instruct-2507</td>
+                <td><span class="tool-mark tool-no" aria-label="No tool">&#10007;</span></td>
+                <td>67.5</td>
+                <td>55.8</td>
+                <td>51.3</td>
+                <td>52.3</td>
+                <td>2.8</td>
+                <td>52.5</td>
+              </tr>
+              <tr>
+                <td>Qwen3-30B-A3B-Thinking-2507</td>
+                <td><span class="tool-mark tool-no" aria-label="No tool">&#10007;</span></td>
+                <td>88.8</td>
+                <td>75.6</td>
+                <td>65.9</td>
+                <td>66.1</td>
+                <td>0.0</td>
+                <td>67.1</td>
+              </tr>
+              <tr>
+                <td>Qwen3.5-35B-A3B</td>
+                <td><span class="tool-mark tool-no" aria-label="No tool">&#10007;</span></td>
+                <td>94.2</td>
+                <td>85.8</td>
+                <td>72.5</td>
+                <td>73.8</td>
+                <td>0.0</td>
+                <td>74.7</td>
+              </tr>
+              <tr class="highlight-row">
+                <td>TRICE-30B</td>
+                <td><span class="tool-mark tool-no" aria-label="No tool">&#10007;</span></td>
+                <td>89.2</td>
+                <td>81.7</td>
+                <td>71.0</td>
+                <td>72.3</td>
+                <td>0.0</td>
+                <td>72.8</td>
+              </tr>
+              <tr>
+                <td>GPT-OSS-20B</td>
+                <td><span class="tool-mark tool-yes" aria-label="With tool">&#10003;</span></td>
+                <td>86.7</td>
+                <td>83.3</td>
+                <td>63.0</td>
+                <td>60.0</td>
+                <td>8.3</td>
+                <td>63.4</td>
+              </tr>
+              <tr>
+                <td>GLM-4.7-Flash</td>
+                <td><span class="tool-mark tool-yes" aria-label="With tool">&#10003;</span></td>
+                <td>95.0</td>
+                <td>84.2</td>
+                <td>76.0</td>
+                <td>68.3</td>
+                <td>11.1</td>
+                <td>71.6</td>
+              </tr>
+              <tr>
+                <td>Nemotron-3-Nano-30B-A3B</td>
+                <td><span class="tool-mark tool-yes" aria-label="With tool">&#10003;</span></td>
+                <td>96.7</td>
+                <td>90.4</td>
+                <td>80.0</td>
+                <td>77.0</td>
+                <td>11.1</td>
+                <td>78.8</td>
+              </tr>
+              <tr>
+                <td>AgentMath-30B-A3B<sup>†</sup></td>
+                <td><span class="tool-mark tool-yes" aria-label="With tool">&#10003;</span></td>
+                <td>86.4</td>
+                <td>73.8</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+              </tr>
+              <tr>
+                <td>GLM-4.7-Flash w/ recipe</td>
+                <td><span class="tool-mark tool-yes" aria-label="With tool">&#10003;</span></td>
+                <td>98.3</td>
+                <td>89.6</td>
+                <td>81.0</td>
+                <td>78.8</td>
+                <td>13.9</td>
+                <td>80.3</td>
+              </tr>
+              <tr class="highlight-row">
+                <td>TRICE-30B</td>
+                <td><span class="tool-mark tool-yes" aria-label="With tool">&#10003;</span></td>
+                <td><strong>99.2</strong></td>
+                <td><strong>92.5</strong></td>
+                <td><strong>82.5</strong></td>
+                <td><strong>80.3</strong></td>
+                <td><strong>16.7</strong></td>
+                <td><strong>81.9</strong></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="table-note">
+            Performance comparison on competition-level mathematical benchmarks. Results are accuracy (%) under each model's indicated inference setting. Models marked with † are reported by concurrent TIR systems under their original protocols; all other results follow our unified protocol.
+            <span>GLM-4.7-Flash w/ recipe shows that the pipeline is not specific to a single model family and can further improve models with native TIR ability.</span>
           </p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+    </section>
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+    <section class="section hero is-light">
+      <div class="container is-max-widescreen">
+        <div class="has-text-centered section-heading">
+          <p class="section-kicker">Generalization</p>
+          <h2 class="title is-3">Math-trained TIR Generalizes Beyond Math</h2>
+        </div>
+        <div class="table-card wide">
+          <table class="table is-fullwidth trice-table results-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Tool</th>
+                <th>FrontierScience</th>
+                <th>GPQA-Diamond</th>
+                <th>LiveCodeBench</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Qwen3-4B-Thinking-2507</td>
+                <td><span class="tool-mark tool-no" aria-label="No tool">&#10007;</span></td>
+                <td>27.5</td>
+                <td>64.4</td>
+                <td>51.4</td>
+              </tr>
+              <tr class="highlight-row">
+                <td>TRICE-4B</td>
+                <td><span class="tool-mark tool-yes" aria-label="With tool">&#10003;</span></td>
+                <td><strong>42.0</strong> <span class="gain">+14.5</span></td>
+                <td><strong>68.8</strong> <span class="gain">+4.4</span></td>
+                <td><strong>55.6</strong> <span class="gain">+4.2</span></td>
+              </tr>
+              <tr>
+                <td>Qwen3-30B-A3B-Thinking-2507</td>
+                <td><span class="tool-mark tool-no" aria-label="No tool">&#10007;</span></td>
+                <td>44.9</td>
+                <td>71.2</td>
+                <td>61.5</td>
+              </tr>
+              <tr class="highlight-row">
+                <td>TRICE-30B</td>
+                <td><span class="tool-mark tool-yes" aria-label="With tool">&#10003;</span></td>
+                <td><strong>53.0</strong> <span class="gain">+8.1</span></td>
+                <td><strong>75.4</strong> <span class="gain">+4.2</span></td>
+                <td><strong>73.2</strong> <span class="gain">+11.7</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-widescreen">
+        <div class="has-text-centered section-heading">
+          <p class="section-kicker">Analysis</p>
+          <h2 class="title is-3">What TIR Unlocks</h2>
+        </div>
+        <div class="table-card wide compact-table">
+          <table class="table is-fullwidth trice-table results-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Tool</th>
+                <th>AIME25</th>
+                <th>HMMT25</th>
+                <th>BeyondAIME</th>
+                <th>IMOAnswerBench</th>
+                <th>APEX25</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Qwen3-235B-A22B-Thinking</td>
+                <td><span class="tool-mark tool-no" aria-label="No tool">&#10007;</span></td>
+                <td>90.8</td>
+                <td>88.8</td>
+                <td>71.8</td>
+                <td>73.8</td>
+                <td>5.56</td>
+              </tr>
+              <tr>
+                <td>DeepSeek-V3.2-Thinking</td>
+                <td><span class="tool-mark tool-no" aria-label="No tool">&#10007;</span></td>
+                <td>96.67</td>
+                <td>90.8</td>
+                <td>76.8</td>
+                <td>75.0</td>
+                <td>0.0</td>
+              </tr>
+              <tr class="highlight-row">
+                <td>TRICE-30B</td>
+                <td><span class="tool-mark tool-yes" aria-label="With tool">&#10003;</span></td>
+                <td><strong>99.2</strong></td>
+                <td><strong>92.5</strong></td>
+                <td><strong>82.5</strong></td>
+                <td><strong>80.3</strong></td>
+                <td><strong>16.7</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="analysis-unlock-panel">
+          <div class="analysis-unlock-copy">
+            <p class="lead">
+              TRICE with tools surpasses substantially larger text-only reasoning models, suggesting that parameter scaling alone cannot replicate what TIR unlocks.
+              Beyond final arithmetic, code serves as a cognitive tool for discovery and search.
+            </p>
+          </div>
+          <img class="unlock-role-image" src="static/images/code_roles_rings.png" alt="Code roles: empirical discovery, algorithmic search, computation offloading, and conjecture verification">
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+    </section>
 
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>@misc{cheng2026teachingthinkingmodelsreason,
+      title={Teaching Thinking Models to Reason with Tools: A Full-Pipeline Recipe for Tool-Integrated Reasoning}, 
+      author={Qianjia Cheng and Yuchen Zhang and Zhilin Wang and Yuxin Zuo and Shunkai Zhang and Yuchen Fan and Yu Qiao and Bowen Zhou and Ning Ding and Yu Cheng and Yun Luo and Ganqu Cui},
+      year={2026},
+      eprint={2605.06326},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2605.06326}, 
+}</code></pre>
+      </div>
+    </section>
+  </main>
 
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
+  <footer class="footer">
     <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              This page was built from the
+              <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>,
+              adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              The website template is licensed under
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+  </footer>
+</body>
+</html>
